@@ -31,7 +31,7 @@ class RegisterPage extends StatelessWidget {
 
   Widget _iconRegister() {
     return Image.asset(
-              "assets/images/register_icon.png",
+              "assets/images/register_icon2.png",
               width: 150.0,
               height: 150.0,
             );
@@ -54,7 +54,7 @@ class RegisterPage extends StatelessWidget {
           padding: EdgeInsets.only(top: 12.0),
         ),
         Text(
-          "Mentoring Flutter Week 1",
+          "Mentoring Flutter Week 2",
           style: TextStyle(
             fontSize: 12.0,
             color: Colors.white,
