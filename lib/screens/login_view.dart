@@ -13,7 +13,7 @@ final GlobalKey<ScaffoldState>  _key = GlobalKey<ScaffoldState>();
 TextEditingController usernameController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
 
-String username = "", password = "";
+String username = "", password = "", pesan="";
 String userAsli = "admin", pass = "mamun";
 
   Widget build(BuildContext context) {
@@ -154,6 +154,10 @@ Widget _titleDescription() {
             Navigator.push(
               context, MaterialPageRoute(builder: (context) => Homepage(username,password))
             );
+            } else {
+              setState(() {
+                pesan = "Username dan Password yang anda masukan Salah (Username : admin | pass: mamun)";
+              });
             }
           },
         ),
@@ -180,6 +184,10 @@ Widget _titleDescription() {
         SizedBox(height : 16.0,),
         Text(username),
         Text(password),
+        Text(pesan,
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white),
+        ),
       ],
     );
   }
