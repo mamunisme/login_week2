@@ -15,7 +15,29 @@ class Homepage extends StatelessWidget {
             Center(
               child: Column(
                 children: <Widget>[
-                  
+                  Text(
+                    "SELAMAT DATANG ADMIN",
+                  style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16.0,
+               ),
+              ),
+              Text(
+                    "password anda : password",
+                  style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 10.0,
+               ),
+              ),
+              FlatButton(
+          child: Text(
+            'Logout',
+            style: TextStyle(color: Colors.white),
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/');
+          },
+        ),
                 ],
               ),
             ),

@@ -153,7 +153,7 @@ Widget _titleDescription() {
           onPressed: () {
             setState(() {
               username = usernameController.text;
-              password = usernameController.text;
+              password = passwordController.text;
             });
             if (username == userAsli && password == pass){
             Navigator.pushNamed(context, '/home');
@@ -180,6 +180,9 @@ Widget _titleDescription() {
             Navigator.pushNamed(context, '/register');
           },
         ),
+        SizedBox(height : 16.0,),
+        Text(username),
+        Text(password),
       ],
     );
   }
