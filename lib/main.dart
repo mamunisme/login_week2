@@ -4,6 +4,7 @@ import 'package:login/screens/register_view.dart';
 import 'package:login/screens/home_view.dart';
 
 void main() {
+  String username, password;
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: "Login Week 2",
@@ -11,7 +12,7 @@ void main() {
     routes: {
       "/" : (context) => LoginPage(),
       "/register" : (context) => RegisterPage(),
-      "/home" : (context) => Homepage(),
+      "/home" : (context) => Homepage(username,password),
     },
   ));
 }

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:login/constant.dart';
 
 class Homepage extends StatelessWidget {
-  @override
+  final String username, password;
+
+  Homepage(this.username,this.password);  
  
  Widget build(BuildContext context) {
     return Scaffold(
@@ -16,14 +18,26 @@ class Homepage extends StatelessWidget {
                 children: <Widget>[
                   _iconHome(),
                   Text(
-                    "SELAMAT DATANG ADMIN",
+                    "SELAMAT DATANG",
+                  style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16.0,
+               ),
+              ),
+              Text(username,
                   style: TextStyle(
                   color: Colors.white,
                   fontSize: 16.0,
                ),
               ),
               Text(
-                    "password anda : password",
+                    "password anda",
+                  style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 10.0,
+               ),
+              ),
+              Text(password,
                   style: TextStyle(
                   color: Colors.white,
                   fontSize: 10.0,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/constant.dart';
+import 'package:login/screens/home_view.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -14,13 +15,7 @@ TextEditingController passwordController = TextEditingController();
 
 String username = "", password = "";
 String userAsli = "admin", pass = "mamun";
-/*
-  //final​ ​GlobalKey​<​ScaffoldState​> _key = ​GlobalKey​<​ScaffoldState​>(); ​
-  //TextEditingController​ usernameController = ​TextEditingController​();
-​//TextEditingController​ passwordController = ​TextEditingController​();
-//
-  //​String​ username = ​""​, password = ​""​;
-*/
+
   Widget build(BuildContext context) {
     return Scaffold(
         key : _key,
@@ -156,7 +151,9 @@ Widget _titleDescription() {
               password = passwordController.text;
             });
             if (username == userAsli && password == pass){
-            Navigator.pushNamed(context, '/home');
+            Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Homepage(username,password))
+            );
             }
           },
         ),
