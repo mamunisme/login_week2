@@ -6,7 +6,6 @@ class Homepage extends StatelessWidget {
  
  Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Home page")),
         body: Container(
         color: ColorPalette.primaryColor,
         padding: EdgeInsets.all(20.0),
@@ -15,6 +14,7 @@ class Homepage extends StatelessWidget {
             Center(
               child: Column(
                 children: <Widget>[
+                  _iconHome(),
                   Text(
                     "SELAMAT DATANG ADMIN",
                   style: TextStyle(
@@ -45,6 +45,14 @@ class Homepage extends StatelessWidget {
         ),
         ),
       );
+  }
+
+Widget _iconHome() {
+    return Image.asset(
+              "assets/images/icon.png",
+              width: 150.0,
+              height: 150.0,
+            );
   }
 
 }
